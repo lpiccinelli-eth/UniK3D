@@ -9,6 +9,7 @@ We used both image-based and sequence-based dataset. The `ImageDataset` class is
 We provide two example dataset [iBims-1](https://drive.google.com/file/d/1etz6Iv2ljix2eMc7nDO-DoXMpDrPbWza/view?usp=drive_link) and [Sintel](https://drive.google.com/file/d/1ZO565_ZWkWQCNhlFa404ctew-w8IbiVh/view?usp=drive_link), for image- and sequence-based pipeline and structure.
 
 You can adapt the data loading and processing to your example; however, you will need to keep the same interface for the model to be consisten and train "out-of-the-box" the model.
+Datasets names to be used in the configs are the same as the class names under `unik3d/datasets`.
 
 The overall data folder should be like:
 

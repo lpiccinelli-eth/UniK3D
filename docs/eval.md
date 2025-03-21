@@ -13,7 +13,7 @@ huggingface-cli download lpiccinelli/unik3d-evaluation --repo-type dataset --loc
 
 ## Configuration
 
-See [`configs/eval/vits.json`](../configs/eval/vits.json) for an example of evaluation configurations on all benchmarks. You can modify "data/val_datasets" to modify the testing dataset list.
+See [`configs/eval/vitl.json`](../configs/eval/vitl.json) for an example of evaluation configurations on all benchmarks. You can modify "data/val_datasets" to modify the testing dataset list.
 
 
 ## Run Evaluation

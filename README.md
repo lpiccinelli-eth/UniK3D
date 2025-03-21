@@ -19,12 +19,13 @@
 > [**UniK3D: Universal Camera Monocular 3D Estimation**](https://lpiccinelli-eth.github.io/pub/unik3d),
 > Luigi Piccinelli, Christos Sakaridis, Mattia Segu, Yung-Hsu Yang, Siyuan Li, Wim Abbeloos, Luc Van Gool, 
 > CVPR 2025,
-> *Paper at [arXiv 2403.18913](https://arxiv.org/pdf/2403.18913.pdf)*  
+<!-- > *Paper at [arXiv 2403.18913](https://arxiv.org/pdf/2403.18913.pdf)*   -->
 
 
 ## News and ToDo
 
-- [ ] Rays to parameters optimization
+- [ ] Rays to parameters optimization.
+- [ ] Release all evaluation dataset on HuggingFace (nuScenes and ScanNet++ missing).
 - [x] `21.03.2025`: Gradio demo and [Huggingface Demo](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo).
 - [x] `20.03.2025`: Training and inference code released.
 - [x] `19.03.2025`: Models released.
@@ -155,6 +156,33 @@ predictions = model(data, {})
 
 ## Infer
 
+To run locally, you can use the script `./scripts/infer.py` via the following command:
+
+```bash
+# Save the output maps and ply
+./scripts/infer.py --input IMAGE_PATH --output OUTPUT_FOLDER --config-file configs/eval/vitl.json --camera-path CAMERA_JSON --save --save-ply
+```
+
+```
+Usage: scripts/infer.py [OPTIONS]
+
+Options:
+  --input PATH                Path to input image.
+  --output PATH               Path to output directory.
+  --config-file PATH          Path to config file. Please check ./configs/eval.
+  --camera-path PATH          Path to camera parameters json file. See assets/demo
+                              for a few examples. The file needs a 'name' field with
+                              the camera model from unik3d/utils/camera.py and a
+                              'params' field with the camera parameters as in the
+                              corresponding class docstring.
+  --resolution-level INTEGER  Resolution level in [0,10). Higher values means it will
+                              resize to larger resolution which increases details but
+                              decreases speed. Lower values lead to opposite.
+  --save                      Save outputs as (colorized) png.
+  --save-ply                  Save pointcloud as ply.
+```
+
+See also [`./scripts/infer.py`](./scripts/infer.py)
 
 
 
