@@ -14,6 +14,9 @@ from unik3d.utils.visualization import colorize, save_file_ply
 
 
 def save(rgb, outputs, name, base_path, save_map=False, save_pointcloud=False):
+
+    os.makedirs(base_path, exist_ok=True)
+
     depth = outputs["depth"]
     rays = outputs["rays"]
     points = outputs["points"]
@@ -39,7 +42,7 @@ def infer(model, args):
     rgb_torch = torch.from_numpy(rgb).permute(2, 0, 1)
 
     camera = None
-    camera_path = args.camera
+    camera_path = args.camera_path
     if camera_path is not None:
         with open(camera_path, "r") as f:
             camera_dict = json.load(f)

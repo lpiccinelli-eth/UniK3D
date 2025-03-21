@@ -9,7 +9,7 @@
 </div>
 
 <div>
-  <img src="assets/docs/unik3d-banner.png"  width="100%" alt="Banner 2" align="center">
+  <img src="assets/docs/compose.png"  width="100%" alt="Banner 2" align="center">
 </div>
 
 <div>
@@ -160,7 +160,7 @@ To run locally, you can use the script `./scripts/infer.py` via the following co
 
 ```bash
 # Save the output maps and ply
-./scripts/infer.py --input IMAGE_PATH --output OUTPUT_FOLDER --config-file configs/eval/vitl.json --camera-path CAMERA_JSON --save --save-ply
+python ./scripts/infer.py --input IMAGE_PATH --output OUTPUT_FOLDER --config-file configs/eval/vitl.json --camera-path CAMERA_JSON --save --save-ply
 ```
 
 ```
@@ -170,7 +170,7 @@ Options:
   --input PATH                Path to input image.
   --output PATH               Path to output directory.
   --config-file PATH          Path to config file. Please check ./configs/eval.
-  --camera-path PATH          Path to camera parameters json file. See assets/demo
+  --camera-path PATH          (Optional) Path to camera parameters json file. See assets/demo
                               for a few examples. The file needs a 'name' field with
                               the camera model from unik3d/utils/camera.py and a
                               'params' field with the camera parameters as in the
