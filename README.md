@@ -1,23 +1,26 @@
-
-[![Demo](https://img.shields.io/badge/HuggingFace-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo)
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-2502.20110-blue?logo=arxiv&color=%23B31B1B)](https://arxiv.org/abs/2502.20110) -->
-[![ProjectPage](https://img.shields.io/badge/Project_Page-UniK3D-blue)](https://lpiccinelli-eth.github.io/pub/unik3d/)
-
-
+<div align="center">
 
 # UniK3D: Universal Camera Monocular 3D Estimation
 
+<a href="https://arxiv.org/abs/2502.20110"><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a>
+<a href='https://lpiccinelli-eth.github.io/pub/unik3d'><img src='https://img.shields.io/badge/Project_Page-Website-green?logo=googlechrome&logoColor=white' alt='Project Page'></a>
+<a href='https://huggingface.co/spaces/lpiccinelli/UniK3D-demo'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live_Demo-blue'></a>
 
-<div style="display: flex; align-items: center;">
-  <img src="assets/docs/unik3d-teaser.png" style="height: 300px; margin-right: 10px;" alt="Banner 1">
-  <!-- <img src="assets/docs/unik3d-banner.png" style="height: 250px;" alt="Banner 2"> -->
 </div>
 
-<!-- > [**UniK3D: Universal Camera Monocular 3D Estimation**](https://arxiv.org/abs/2403.18913),   -->
-> **UniK3D: Universal Camera Monocular 3D Estimation**,
+<div style="display: flex; align-items: center;">
+  <!-- <img src="assets/docs/unik3d-teaser.png" style="height: 300px; margin-right: 10px;" alt="Banner 1"> -->
+  <img src="assets/docs/unik3d-banner.png" style="height: 250px;" alt="Banner 2">
+</div>
+
+<div>
+  <p></p>
+</div>
+
+> [**UniK3D: Universal Camera Monocular 3D Estimation**](https://lpiccinelli-eth.github.io/pub/unik3d),
 > Luigi Piccinelli, Christos Sakaridis, Mattia Segu, Yung-Hsu Yang, Siyuan Li, Wim Abbeloos, Luc Van Gool, 
-> CVPR 2025,  
-<!-- > *Paper at [arXiv 2403.18913](https://arxiv.org/pdf/2403.18913.pdf)*   -->
+> CVPR 2025,
+> *Paper at [arXiv 2403.18913](https://arxiv.org/pdf/2403.18913.pdf)*  
 
 
 ## News and ToDo
@@ -31,24 +34,23 @@
 
 ## Visualization
 
-### Intro
-<p align="left">
-  <img src="assets/docs/intro.gif" alt="animated"  />
+<p align="center">
+  <img src="assets/docs/intro.gif" alt="animated"/>
 </p>
 
 ### Single 360 Image
-<p align="left">
-  <img src="assets/docs/venice.gif" alt="animated" />
+<p align="center">
+  <img src="assets/docs/venice.gif" alt="animated"/>
 </p>
 
-More in UniK3D [Project Page](https://lpiccinelli-eth.github.io/pub/unik3d/).
+***Check more results in our [website](https://lpiccinelli-eth.github.io/pub/unik3d/)!***
 
 
-## Installation-free Demo
+## Gradio Demo
 
-Plase visit our [HugginFace Space](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo) for an installation-free test on your images!
-Its 3D pointcloud can be used for single-image calibration.
-You can use a local Gradio demo if the HuggingFace is too slow (CPU-based) by running `python ./gradio_demo.py`.
+- Plase visit our [HugginFace Space](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo) for an installation-free test on your images!
+- Its 3D pointcloud can be used for single-image calibration.
+- You can use a local Gradio demo if the HuggingFace is too slow (CPU-based) by running `python ./gradio_demo.py` after installation.
 
 
 ## Installation
@@ -201,7 +203,7 @@ You can look into function `UniK3D` in [hubconf.py](hubconf.py) to see how to in
 
 ## Training
 
-Please [visit the training README](scripts/README.md) for more information.
+Please visit the [training README](scripts/README.md) for more information.
 
 
 ## Results
