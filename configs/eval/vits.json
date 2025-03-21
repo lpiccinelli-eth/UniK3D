@@ -73,8 +73,7 @@
             "Sintel"
         ],
         "val_datasets": [
-            "Sintel",
-            "IBims"
+            "d2D3DS", "ADT", "DiodeIndoor", "DiodeIndoor_F", "ETH3D", "ETH3D_F", "IBims", "IBims_F", "KITTI360", "NYUv2Depth", "KITTI"
         ],
         "data_root": "datasets",
         "crop": "garg",

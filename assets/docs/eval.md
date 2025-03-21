@@ -1,0 +1,49 @@
+# Evaluation
+
+We provide a unified evaluation script that runs baselines on multiple benchmarks. It takes a baseline model and evaluation configurations, evaluates on-the-fly, and reports results instantly in a JSON file.
+
+## Benchmarks
+
+Donwload the processed datasets from [Huggingface Datasets](https://huggingface.co/datasets/lpiccinelli/unik3d-evaluation) and put them in the `data/eval` directory, using `huggingface-cli`:
+
+```bash
+mkdir -p data/eval
+huggingface-cli download lpiccinelli/unik3d-evaluation --repo-type dataset --local-dir data/eval --local-dir-use-symlinks False
+```
+
+Then unzip the downloaded files:
+
+```bash
+cd data/eval  
+unzip '*.zip'
+```
+
+## Configuration
+
+See [`configs/eval/config_vits.json`](../configs/eval/config_vits.json) for an example of evaluation configurations on all benchmarks. You can modify "datasets/val_datasets" to modify the testing dataset list.
+
+
+## Run Evaluation
+
+Run the script [`scripts/eval.py`](../script/scripts/eval.py). 
+For example, 
+
+```bash
+# Evaluate UniK3D on the 13 benchmarks
+python moge/scripts/eval_baseline.py --baseline baselines/moge.py --config configs/eval/all_benchmarks.json --output eval_output/moge.json --pretrained Ruicheng/moge-vitl --resolution_level 9
+```
+
+
+Details of the arguments:
+
+```
+Usage: eval.py [OPTIONS]
+
+  Evaluation script.
+
+Options:
+  --config-path PATH    Path to the evaluation configurations.
+  --dataroot PATH  Path to the where the hdf5 datasets are stored
+  --save-path PATH Path to the output json file.
+  --camera-gt      Use camera-gt during evaluation.
+```

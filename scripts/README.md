@@ -38,7 +38,7 @@ export DATAROOT=<where-you-stored-the-hdf5>
 export MASTER_PORT=$((( RANDOM % 600 ) + 29400 ))
 
 # The config will be used
-export CFG="unik3d_vit-s.json"
+export CFG="train/config_vits.json"
 ```
 
 If you are on a machine without SLURM you can run the following:
