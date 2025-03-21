@@ -7,7 +7,7 @@ We provide a unified evaluation script that runs baselines on multiple benchmark
 Donwload the processed datasets from [Huggingface Datasets](https://huggingface.co/datasets/lpiccinelli/unik3d-evaluation) and put them in your `$DATAROOT` directory, using `huggingface-cli`:
 
 ```bash
-export DATAROOT=data/eval
+export DATAROOT=$HOME/data/eval
 huggingface-cli download lpiccinelli/unik3d-evaluation --repo-type dataset --local-dir $DATAROOT --local-dir-use-symlinks False
 ```
 
@@ -20,7 +20,7 @@ unzip '*.zip'
 
 ## Configuration
 
-See [`configs/eval/vits.json`](../configs/eval/vits.json) for an example of evaluation configurations on all benchmarks. You can modify "datasets/val_datasets" to modify the testing dataset list.
+See [`configs/eval/vits.json`](../configs/eval/vits.json) for an example of evaluation configurations on all benchmarks. You can modify "data/val_datasets" to modify the testing dataset list.
 
 
 ## Run Evaluation
