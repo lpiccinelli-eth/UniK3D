@@ -68,7 +68,7 @@ if __name__ == "__main__":
     parser.add_argument("--config-file", type=str, default="./configs/eval/vitl.json")
     parser.add_argument("--camera-path", type=str, default=None)
     parser.add_argument("--resolution-level", type=int, default=9, help="Resolution level in [0,10)", choices=list(range(10)))
-    parser.add_argument("--interpolation-mode", type=str, default="bilinear", help="Output interpolation" choices=["nearest", "nearest-exact", "bilinear"])
+    parser.add_argument("--interpolation-mode", type=str, default="bilinear", help="Output interpolation", choices=["nearest", "nearest-exact", "bilinear"])
     args = parser.parse_args()
 
     print("Torch version:", torch.__version__)

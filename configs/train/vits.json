@@ -65,13 +65,16 @@
         "mini": 1.0,
         "num_frames": 1,
         "sampling": {
-            "KITTI": 1.0
+            "IBims": 1.0,
+            "Sintel": 1.0
         },
         "train_datasets": [
-            "KITTI"
+            "IBims",
+            "Sintel"
         ],
         "val_datasets": [
-            "KITTI"
+            "IBims",
+            "Sintel"
         ],
         "data_root": "datasets",
         "crop": "garg",

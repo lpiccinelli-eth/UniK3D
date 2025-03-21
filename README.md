@@ -45,13 +45,6 @@
 ***Check more results in our [website](https://lpiccinelli-eth.github.io/pub/unik3d/)!***
 
 
-## Gradio Demo
-
-- Plase visit our [HugginFace Space](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo) for an installation-free test on your images!
-- Its 3D pointcloud can be used for single-image calibration.
-- You can use a local Gradio demo if the HuggingFace is too slow (CPU-based) by running `python ./gradio_demo.py` after installation.
-
-
 ## Installation
 
 Requirements are not in principle hard requirements, but there might be some differences (not tested):
@@ -90,6 +83,12 @@ python ./scripts/demo.py
 ```
 If everything runs correctly, `demo.py` should print: `RMSE on 3D clouds for ScanNet sample: 21.9cm`.
 `demo.py` allows you also to save output information, e.g. rays, depth and 3D pointcloud as `.ply` file.
+
+
+## Gradio Demo
+
+- Plase visit our [HugginFace Space](https://huggingface.co/spaces/lpiccinelli/UniK3D-demo) for an installation-free test on your images!
+- You can use a local Gradio demo if the HuggingFace is too slow (CPU-based) by running `python ./gradio_demo.py` after installation.
 
 
 ## Get Started
@@ -154,6 +153,11 @@ data = {"image": rgb, "rays": rays}
 predictions = model(data, {})
 ```
 
+## Infer
+
+
+
+
 ## Model Zoo
 
 The available models are the following:
@@ -202,10 +206,12 @@ You can look into function `UniK3D` in [hubconf.py](hubconf.py) to see how to in
 
 ## Training
 
-Please visit the [training README](scripts/README.md) for more information.
+Please visit the [docs/train](docs/train.md) for more information.
 
 
 ## Results
+
+Please visit the [docs/eval](docs/eval.md) for more information about running evaluation..
 
 ### Metric 3D Estimation
 The metrics is F1 over metric 3D pointcloud (higher is better) on zero-shot evaluation. 

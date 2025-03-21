@@ -26,7 +26,7 @@ Please make sure the [Installation](../README.md#installation) is completed.
 From the root of the repo:
 
 ```bash
-export REPO=`pwd`
+export REPO=<where-the-repo-is>
 
 # Adapt all this to your setup
 export TMPDIR="/tmp"
