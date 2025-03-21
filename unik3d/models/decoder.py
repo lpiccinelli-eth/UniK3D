@@ -562,4 +562,4 @@ class Decoder(nn.Module):
             ),
             requires_grad=False,
         )
-        self.camera_gt = False
+        self.camera_gt = True
