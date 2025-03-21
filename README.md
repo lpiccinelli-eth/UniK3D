@@ -8,9 +8,8 @@
 
 </div>
 
-<div style="display: flex; align-items: center;">
-  <!-- <img src="assets/docs/unik3d-teaser.png" style="height: 300px; margin-right: 10px;" alt="Banner 1"> -->
-  <img src="assets/docs/unik3d-banner.png" style="height: 250px;" alt="Banner 2">
+<div>
+  <img src="assets/docs/unik3d-banner.png"  width="100%" alt="Banner 2" align="center">
 </div>
 
 <div>
