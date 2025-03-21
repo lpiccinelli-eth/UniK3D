@@ -25,16 +25,15 @@ See [`configs/eval/vits.json`](../configs/eval/vits.json) for an example of eval
 
 ## Run Evaluation
 
-Run the script [`scripts/eval.py`](../script/scripts/eval.py). 
-For example, 
+Run the script [`scripts/eval.py`](../script/scripts/eval.py):
 
 ```bash
 # Evaluate UniK3D on the 13 benchmarks
-python moge/scripts/eval_baseline.py --dataroot $DATAROOT --config configs/eval/vits.json --save-path ./unik3d.json --camera-gt
+python moge/scripts/eval_baseline.py --dataroot $DATAROOT --config configs/eval/vits.json --save-path ./unik3d.json --camera-gt --distributed
 ```
 
 
-Details of the arguments:
+With arguments:
 
 ```
 Usage: eval.py [OPTIONS]

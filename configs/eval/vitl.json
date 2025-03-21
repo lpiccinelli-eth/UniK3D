@@ -65,12 +65,10 @@
         "mini": 1.0,
         "num_frames": 1,
         "sampling": {
-            "Sintel": 1.0,
-            "IBims": 1.0
+            "KITTI": 1.0
         },
         "train_datasets": [
-            "IBims",
-            "Sintel"
+            "KITTI"
         ],
         "val_datasets": [
             "d2D3DS",
@@ -137,7 +135,7 @@
         },
         "pixel_decoder": {
             "name": "Decoder",
-            "hidden_dim": 256,
+            "hidden_dim": 512,
             "dropout": 0.0,
             "depths": [
                 2,
@@ -145,7 +143,7 @@
                 2
             ],
             "detach": 0.1,
-            "out_dim": 32,
+            "out_dim": 64,
             "kernel_size": 3,
             "num_prompt_blocks": 1,
             "use_norm": false
@@ -153,7 +151,7 @@
         "pixel_encoder": {
             "lr": 3e-06,
             "wd": 0.1,
-            "name": "dinov2_vits14",
+            "name": "dinov2_vitl14",
             "frozen_stages": 0,
             "num_register_tokens": 0,
             "use_norm": true,
@@ -161,10 +159,10 @@
             "pretrained": null,
             "stacking_fn": "last",
             "output_idx": [
-                3,
                 6,
-                9,
-                12
+                12,
+                18,
+                24
             ]
         }
     }

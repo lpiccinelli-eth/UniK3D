@@ -149,7 +149,7 @@ def main_worker(args: argparse.Namespace, config_file: str | None = None):
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser(description='Training script', conflict_handler='resolve')
-    parser.add_argument("--master-port", type=str)
+    parser.add_argument("--master-port", type=str, default=29400)
     parser.add_argument("--distributed",  action="store_true")
     parser.add_argument("--local_rank",  type=int, default=0)
     parser.add_argument("--config-file", type=str, default="./configs/eval/vitl.json")
