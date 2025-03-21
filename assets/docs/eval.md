@@ -11,13 +11,6 @@ export DATAROOT=$HOME/data/eval
 huggingface-cli download lpiccinelli/unik3d-evaluation --repo-type dataset --local-dir $DATAROOT --local-dir-use-symlinks False
 ```
 
-Then unzip the downloaded files:
-
-```bash
-cd $DATAROOT  
-unzip '*.zip'
-```
-
 ## Configuration
 
 See [`configs/eval/vits.json`](../configs/eval/vits.json) for an example of evaluation configurations on all benchmarks. You can modify "data/val_datasets" to modify the testing dataset list.
@@ -29,13 +22,13 @@ Run the script [`scripts/eval.py`](../script/scripts/eval.py):
 
 ```bash
 # Evaluate UniK3D on the 13 benchmarks
-python moge/scripts/eval_baseline.py --dataroot $DATAROOT --config configs/eval/vits.json --save-path ./unik3d.json --camera-gt --distributed
+python scripts/eval.py --dataroot $DATAROOT --config configs/eval/vits.json --save-path ./unik3d.json --camera-gt
 ```
 
 
 With arguments:
 
-```
+```bash
 Usage: eval.py [OPTIONS]
 
   Evaluation script.

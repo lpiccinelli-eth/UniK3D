@@ -95,6 +95,7 @@ def main_worker(args: argparse.Namespace, config_file: str | None = None):
             augmentations_db=augmentations_db,
             normalize=config["data"].get("normalization", "imagenet"),
             resize_method=resize_method,
+            shape_constraints=config["data"].get("shape_constraints", {}),
             num_frames=1,
             mini=1.0,
         )
@@ -121,7 +122,6 @@ def main_worker(args: argparse.Namespace, config_file: str | None = None):
         ) for name_dataset, dataset in val_datasets.items()
     }
     
-
     is_shell = int(os.environ.get("SHELL_JOB", "0"))
     if is_main_process(): 
         print("shell job?", is_shell)
@@ -139,7 +139,8 @@ def main_worker(args: argparse.Namespace, config_file: str | None = None):
             context=context,
             idxs=[0],
         )
-
+    
+    stats = {k: v for k,v in stats.items() if k in config["data"]["val_datasets"]}
     if is_main_process():
         with open(args.save_path, "w") as f:
             json.dump(stats, f, indent=4)
@@ -154,7 +155,7 @@ if __name__ == '__main__':
     parser.add_argument("--local_rank",  type=int, default=0)
     parser.add_argument("--config-file", type=str, default="./configs/eval/vitl.json")
     parser.add_argument("--camera-gt",  action="store_true")
-    parser.add_argument("--save-path", type=str, default=".")
+    parser.add_argument("--save-path", type=str, default="./unik3d.json")
     parser.add_argument("--dataroot", type=str, required=True)
 
     args = parser.parse_args()

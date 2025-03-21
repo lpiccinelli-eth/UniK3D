@@ -65,12 +65,8 @@
         "mini": 1.0,
         "num_frames": 1,
         "sampling": {
-            "Sintel": 1.0,
-            "IBims": 1.0
         },
         "train_datasets": [
-            "IBims",
-            "Sintel"
         ],
         "val_datasets": [
             "d2D3DS",
